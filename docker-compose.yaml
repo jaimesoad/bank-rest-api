@@ -1,0 +1,17 @@
+version: '1.0'
+
+services:
+  db:
+    container_name: mysql1
+    image: mysql
+    environment:
+      MYSQL_DATABASE: 'bank'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'passwd'
+      MYSQL_ROOT_PASSWORD: 'passwd'
+
+    ports:
+      - '3306:3306'
+
+    expose:
+      - '3306'
